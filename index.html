@@ -2,61 +2,53 @@
 <html>
 
 <head>
-  <title>Cards Game</title>
-  <style>
-    /* Engine-Specific */
-    * {
-      margin: 0;
-      overflow: hidden;
-    }
-  </style>
+    <title>Day 09</title>
+    <style>
+        /* Engine-Specific */
+        * {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
-  <canvas id="canv"></canvas>
-  <script src="./engine/Engine.js"></script>
-  <script src="./engine/Scene.js"></script>
-  <script src="./engine/GameObject.js"></script>
-  <script src="./engine/Component.js"></script>
-  <script src="./engine/Input.js"></script>
-  <script src="./engine/Vector2.js"></script>
-  <script src="./engine/Time.js"></script>
+    <canvas id="canv"></canvas>
+    <script src="./engine/Engine.js"></script>
+    <script src="./engine/Scene.js"></script>
+    <script src="./engine/GameObject.js"></script>
+    <script src="./engine/Component.js"></script>
+    <script src="./engine/Input.js"></script>
+    <script src="./engine/Vector2.js"></script>
+    <script src="./engine/Time.js"></script>
+    <script src="./engine/Collisions.js"></script>
+    
+    <script src="./engine/components/Transform.js"></script>
+    <script src="./engine/components/TextLabel.js"></script>
+    <script src="./engine/components/Polygon.js"></script>
+    
+    
+    <script src="./game/MainScene.js"></script>
+    <script src="./game/BatSymbolGameObject.js"></script>
+    <script src="./game/BatSymbolComponent.js"></script>
 
-  <script src="./engine/components/Transform.js"></script>
-  <script src="./engine/components/TextLabel.js"></script>
-  <script src="./engine/components/Polygon.js"></script>
-
-
-
-
-
-  <script>
-
-
-    class MainScene extends Scene {
-      constructor() {
-        super()
-        this.instantiate(new CardGameObject(), new Vector2(200, 200))
-        this.instantiate(new CardGameObject(), new Vector2(250, 220))
-        this.instantiate(new CardGameObject(), new Vector2(300, 240))
-        this.instantiate(new CardGameObject(), new Vector2(350, 260))
-        
-
-      }
-    }
-
-    class CardGameObject extends GameObject {
-      constructor() {
-        super("CardGameObject")
-        this.addComponent(new Polygon(), { points: [new Vector2(-50, -70), new Vector2(50, -70), new Vector2(50, 70), new Vector2(-50, 70)], fillStyle: "grey", strokeStyle:"black", lineWidth:10 })
-      }
-    }
-
+    <script src="./game/TriangleComponent.js"></script>
+    <script src="./game/TriangleGameObject.js"></script>
+    
+    <script src="./game/LaserComponent.js"></script>
+    <script src="./game/LaserGameObject.js"></script>
+    
+    <script src="./game/PointsComponent.js"></script>
+    <script src="./game/PointsGameObject.js"></script>
+    
+    <script src="./game/Globals.js"></script>
     
 
-    Engine.currentScene = new MainScene()
-    Engine.start()
-  </script>
+
+    <script>
+        Engine.currentScene = new MainScene()
+        Engine.start()
+    </script>
 </body>
 
 </html>
