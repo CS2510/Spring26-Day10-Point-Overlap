@@ -1,3 +1,10 @@
+// Please carefully review the rules about academic integrity found in the academicIntegrity.md file found at the root of this project.
+
+/**
+ * Static class that manages keyboard and mouse input in our engine.
+ * 
+ * See https://docs.unity3d.com/ScriptReference/Input.html
+ */
 class Input{
     static keysDown = []
 

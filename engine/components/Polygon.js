@@ -1,3 +1,18 @@
+// Please carefully review the rules about academic integrity found in the academicIntegrity.md file found at the root of this project.
+
+
+/**
+ * Polygon component.
+ * This is main class for drawing in our engine (other that TextLabel).
+ * 
+ * This class is meant to be a represent a simplified composition of the Renderer and Mesh classes
+ * 
+ * In order for a polygon to be drawn, it needs a fillStyle color and/or strokeStyle and a list of Vector2 point.
+ * 
+ * If you don't want a fill color, set fillStyle to "transparent"
+ * 
+ * If you don't want a stroke color, set the strokeStyle to "transparent"
+ */
 class Polygon extends Component{
     points = []
     fillStyle = "black"

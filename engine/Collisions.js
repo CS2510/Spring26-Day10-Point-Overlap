@@ -1,3 +1,5 @@
+// Please carefully review the rules about academic integrity found in the academicIntegrity.md file found at the root of this project.
+
 class Collisions {
     static isOverlapPointVertices(point, vertices) {
         return point >= Math.min(...vertices) && point <= Math.max(...vertices)
